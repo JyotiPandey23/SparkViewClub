@@ -1,0 +1,125 @@
+﻿   <!-- Breadcrumb section Start -->
+<div class="breadcrumb-area bg-peach position-relative z-1">
+    <img src="~/images/br-line-shape-2.png" alt="Shape" class="br-line-shape position-absolute z-n1">
+    <img src="~/images/br-shape-1.png" alt="Shape" class="br-shape-one move-right position-absolute z-n1">
+    <img src="~/images/br-shape-2.png" alt="Shape" class="br-shape-two move-left position-absolute z-n1">
+    <img src="~/images/br-bg-shape.png" alt="Shape" class="br-bg-shape position-absolute bottom-0 start-0">
+    <div class="container text-center">
+        <h2 class="section-title style-two">International</h2>
+        <ul class="br-menu list-unstyled mb-0">
+            <li><a href="#">Home</a></li>
+            <li>International Destinations</li>
+        </ul>
+    </div>
+</div>
+<div class="container-fluid style-one ptb-120">
+        <div id="destination-container" class="row gx-xxl-25"></div>
+
+        <!-- Pagination Area -->
+        <div id="pagination" class="pagination-area d-flex align-items-center justify-content-center mt-xl-3"></div>
+    </div>
+
+    <script>
+        // ======== SAMPLE DATA (You can load this from JSON/API) ========
+        const destinations = [
+          { name: "Bangkok,Thailand", tours: 8, img: "https://images.unsplash.com/photo-1712487650909-2aaf5c5eac36?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774" },
+          { name: "Bali, Indonesia", tours: 10, img: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" },
+
+          { name: "Japan", tours: 7, img: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" },
+          { name: "Singapore", tours: 6, img: "https://images.unsplash.com/photo-1496939376851-89342e90adcd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" },
+          { name: "Vietnam", tours: 8, img: "https://images.unsplash.com/photo-1557750255-c76072a7aad1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" },
+          { name: "Sri Lanka", tours: 5, img: "https://images.unsplash.com/photo-1612862862126-865765df2ded?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774" },
+          { name: "Nepal", tours: 7, img: "http://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871" },
+          { name: "Bhutan", tours: 6, img: "https://images.unsplash.com/photo-1598869012638-f5351b49498f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" },
+          { name: "Malaysia", tours: 9, img: "https://images.unsplash.com/photo-1577931683033-1059552104e0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=873" },
+          { name: "Maldives", tours: 8, img: "https://images.unsplash.com/photo-1516815231560-8f41ec531527?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=867" },
+          { name: "Philippines", tours: 10, img: "https://images.unsplash.com/photo-1690722410433-c116c7272c32?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" },
+          { name: "Dubai, UAE", tours: 12, img: "https://images.unsplash.com/photo-1628859017536-c2f1d69f3c84?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=637" },
+          { name: "Turkey", tours: 11, img: "https://images.unsplash.com/photo-1535916707207-35f97e715e1c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774" },
+          { name: "China", tours: 9, img: "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870" }
+        ];
+
+
+        const itemsPerPage = 6;
+        let currentPage = 1;
+
+        // ======== Render Destinations ========
+        function renderDestinations(page) {
+          const container = document.getElementById('destination-container');
+          container.innerHTML = '';
+
+          const start = (page - 1) * itemsPerPage;
+          const end = start + itemsPerPage;
+          const paginated = destinations.slice(start, end);
+
+          paginated.forEach(dest => {
+            const card = document.createElement('div');
+            card.className = 'col-xxl-3 col-xl-4 col-md-6';
+            card.innerHTML = `
+              <div class="city-card style-one position-relative overflow-hidden z-1 round-10 mb-45">
+                  <div class="city-img position-relative round-10">
+                      <span class="tour-amt fw-bold fs-20 position-absolute start-0 d-inline-block">${dest.tours} Tour</span>
+                      <img src="${dest.img}" alt="${dest.name}" class="round-10">
+                  </div>
+                  <h3 class="fs-24 fw-semibold mb-0">
+                      <a href="#" class="text-title link-hover-primary">${dest.name}</a>
+                  </h3>
+              </div>
+            `;
+            container.appendChild(card);
+          });
+        }
+
+        // ======== Render Pagination (Styled like your HTML) ========
+        function renderPagination() {
+          const totalPages = Math.ceil(destinations.length / itemsPerPage);
+          const pagination = document.getElementById('pagination');
+          pagination.innerHTML = '';
+
+          // Left Arrow
+          const leftArrow = document.createElement('span');
+          leftArrow.className = 'page-numbers d-flex flex-column align-items-center justify-content-center rounded-circle';
+          leftArrow.innerHTML = `<img src="/images/left-long-arrow.svg" alt="Arrow">`;
+          leftArrow.onclick = () => {
+            if (currentPage > 1) {
+              currentPage--;
+              updatePagination();
+            }
+          };
+          pagination.appendChild(leftArrow);
+
+          // Page Numbers
+          for (let i = 1; i <= totalPages; i++) {
+            const pageNum = document.createElement('span');
+            pageNum.className = `page-numbers d-flex flex-column align-items-center justify-content-center rounded-circle ${i === currentPage ? 'current' : ''}`;
+            pageNum.textContent = i.toString().padStart(2, '0'); // show as 01, 02...
+            pageNum.onclick = () => {
+              currentPage = i;
+              updatePagination();
+            };
+            pagination.appendChild(pageNum);
+          }
+
+          // Right Arrow
+          const rightArrow = document.createElement('span');
+          rightArrow.className = 'page-numbers d-flex flex-column align-items-center justify-content-center rounded-circle';
+          rightArrow.innerHTML = `<img src="/images/right-long-arrow.svg" alt="Arrow">`;
+          rightArrow.onclick = () => {
+            if (currentPage < totalPages) {
+              currentPage++;
+              updatePagination();
+            }
+          };
+          pagination.appendChild(rightArrow);
+        }
+
+        // ======== Update Page + Pagination ========
+        function updatePagination() {
+          renderDestinations(currentPage);
+          renderPagination();
+        }
+
+        // ======== Initialize ========
+        updatePagination();
+    </script>
+    

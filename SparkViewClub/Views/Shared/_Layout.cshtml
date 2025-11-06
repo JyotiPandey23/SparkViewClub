@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/css/scrollcue.min.css" />
+    <link rel="stylesheet" href="~/css/remixicon.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/footer.css" />
+    <link rel="stylesheet" href="~/css/responsive.css" />
+    <link rel="stylesheet" href="~/css/dark-theme.css" />
+    <title>@ViewData["Title"] - Spark View Club & Resorts Private Limited</title>
+    <link rel="icon" type="image/png" href="~/~/images/favicon.png" />
+</head>
+<body>
+    <!--  Preloader Start -->
+    <div class="preloader-area style-one" id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!--  Preloader End -->
+    <!-- Theme Switcher Start -->
+    <div class="switch-theme-mode">
+        <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <!-- Theme Switcher End -->
+    <!-- Custom Cursor -->
+    <div class="cursor style-one"></div>
+    <div class="cursor-inner style-one"></div>
+
+    <!-- Navbar Start -->
+    <div class="navbar-area style-four bg-transparent position-relative z-2" id="navbar">
+        <div class="container-fluid">
+            <div class="navbar-wrapper d-flex justify-content-between align-items-center">
+                <a  class="navbar-brand">
+
+                  <h3>Spark View</h3>
+                    @*  <img src="~/images/logo.png" alt="Logo" class="logo-light">
+                    <img src="~/images/logo-white.png" alt="Logo" class="logo-dark"> *@
+                </a>
+                <ul class="header-submenu list-unstyled mb-0 mx-auto d-xxl-inline-block d-none">
+                    <li class="d-inline-block"><a href="#" class="text-para hover-text-secondary fw-bold">Welcome To Travel Agency<i class="ri-arrow-right-up-line"></i></a></li>
+                    <li class="d-inline-block"><a href="#" class="text-para hover-text-secondary fw-bold">Award Winning Company<i class="ri-arrow-right-up-line"></i></a></li>
+                </ul>
+                <div class="header-submenu-wrap d-block ms-auto me-2 d-xxl-none d-inline-block">
+                    <span class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-white"><i class="ri-more-line"></i></span>
+                    <ul class="header-submenu list-unstyled d-flex flex-wrap mb-0 mx-auto">
+                        <li><a href="#" class="text-para hover-text-secondary fw-bold">Welcome To Travel Agency<img src="~/images/up-right-arrow.svg" alt="Icon"></a></li>
+                        <li><a href="#" class="text-para hover-text-secondary fw-bold">Award Winning Company<img src="~/images/up-right-arrow.svg" alt="Icon"></a></li>
+                    </ul>
+                </div>
+                <div class="menu-area ms-xxl-auto">
+                    <div class="overlay"></div>
+                    <nav class="menu">
+                        <div class="menu-mobile-header">
+                            <button type="button" class="menu-mobile-arrow bg-transparent border-0"><i class="ri-arrow-left-s-line"></i></button>
+                            <div class="menu-mobile-title"></div>
+                            <button type="button" class="menu-mobile-close bg-transparent border-0"><i class="ri-close-line"></i></button>
+                        </div>
+                        <ul class="menu-section p-0 mb-0 lh-1">
+                            <li class="menu-item-has-children">
+                                <a asp-controller="Home" asp-action="Index" class="active">Home<i class="ri-add-line"></i></a>
+                               
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a asp-controller ="Home" asp-action="About_us">About Us<i class="ri-add-line"></i></a>
+                               
+                            </li>
+                          
+                            <li class="menu-item-has-children">
+                                <a asp-controller="Home" asp-action="Domestic_destination">Destinations<i class="ri-add-line"></i></a>
+                                <ul class="menu-subs menu-column-1">
+                                    <li><a asp-controller="Home" asp-action="Domestic_destination">Domestic</a></li>
+                                    <li><a asp-controller="Home" asp-action="Internation_destination">International</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a asp-controller="Home" asp-action="Contact_us">Contact Us<i class="ri-add-line"></i></a>
+
+                            </li>
+                            <li class="menu-item-has-children">
+
+                                <a href="#">Membership Pages<i class="ri-add-line"></i></a>
+                                <ul class="menu-subs menu-column-1">
+                                    <li><a asp-controller="Home" asp-action="MembershipPlan">Membership Plan</a></li>
+                                    <li><a asp-controller="Home" asp-action="MembershipLogin">Membership Login</a></li>
+                                    <li><a>PayNow</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="other-options d-flex flex-wrap align-items-center justify-content-end">
+                   @*  <div class="option-item">
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar-area" aria-controls="sidebar-area" class="sidebar-btn d-flex flex-column align-items-center justify-content-center rounded-circle">
+                            <img src="~/images/sidebar-btn.svg" alt="Icon">
+                        </button>
+                    </div> *@
+                    <div class="option-item d-lg-none">
+                        <button type="button" class="menu-mobile-trigger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Body -->
+    @RenderBody()
+
+
+    <!-- Footer Start -->
+    <footer class="footer-area style-two bg_primary position-relative z-1 pt-120">
+        <img src="~/images/footer-bg-shape.png" alt="Shape" class="footer-bg-shape position-absolute top-0 start-0 w-100 z-n1">
+        <div class="footer-top position-relative z-1 pb-90">
+            <div class="container-fluid style-one">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 pe-xxl-5">
+                        <div class="footer-widget mb-30" data-cue="slideInUp">
+                            <a class="logo d-block mb-40"><h3 style="color:white;">Spark View</h3></a>
+                            <p class="comp-desc fw-normal text-offwhite mb-45 pe-xxl-5">
+                                Spark View Club &amp; Resorts Private Limited offers premium hospitality services — handcrafted itineraries, luxury stays, and personalised guest experiences to make every trip memorable.
+                            </p>
+                            <ul class="social-profile style-one list-unstyled mb-0">
+                                <li><a href="https://www.facebook.com/share/1Gzw5NJgkQ/" target="_blank" class="d-flex flex-column align-items-center justify-content-center"><i class="ri-facebook-fill"></i></a></li>
+                                <li><a href="https://x.com/?lang=en" target="_blank" class="d-flex flex-column align-items-center justify-content-center"><i class="ri-twitter-x-line"></i></a></li>
+                                <li><a href="https://www.linkedin.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center"><i class="ri-linkedin-fill"></i></a></li>
+                                <li><a href="https://www.instagram.com/sparkviewclubandresort?igsh=MTBvNWw5eXQ1dHNjaw==" target="_blank" class="d-flex flex-column align-items-center justify-content-center"><i class="ri-instagram-line"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 offset-xxl-1 col-lg-3 col-md-6 ps-xxl-2 ps-lg-5">
+                        <div class="footer-widget mb-30" data-cue="slideInUp" data-delay="200">
+                            <h3 class="footer-widget-title fs-24 fw-bold text-white mb-30">Quick Links</h3>
+                            <ul class="footer-menu list-unstyled mb-0">
+                                <li><a asp-controller="Home" asp-action="Index" class="link style-three fw-bold"><i class="ri-arrow-right-s-line"></i>Home</a></li>
+                                <li><a asp-controller="Home" asp-action="About_us" class="link style-three fw-bold"><i class="ri-arrow-right-s-line"></i>About Us</a></li>
+                                <li><a asp-controller="Home" asp-action="Contact_us" class="link style-three fw-bold"><i class="ri-arrow-right-s-line"></i>Contact Us</a></li>
+                                <li><a asp-controller="Home" asp-action="MembershipPlan" class="link style-three fw-bold"><i class="ri-arrow-right-s-line"></i>Membership</a></li>
+                                <li><a asp-controller="Home" asp-action="Domestic_destination" class="link style-three fw-bold"><i class="ri-arrow-right-s-line"></i>Destinations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 offset-xxl-1 col-lg-3 col-md-6 ps-xxl-0">
+                        <div class="footer-widget mb-30" data-cue="slideInUp" data-delay="250">
+                            <h3 class="footer-widget-title fs-24 fw-bold text-white mb-30">Important Links</h3>
+                            <ul class="footer-menu list-unstyled mb-0">
+                                <li>
+                                    <a asp-controller="Home" asp-action="Index" class="link style-three fw-bold">
+                                        <i class="ri-arrow-right-s-line"></i>Terms and Conditions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Home" asp-action="Index" class="link style-three fw-bold">
+                                        <i class="ri-arrow-right-s-line"></i>Privacy Policy
+
+                                    </a>
+                                </li>
+                                <li><a asp-controller="Home" asp-action="Index" class="link style-three fw-bold"><i class="ri-arrow-right-s-line"></i>Pay and Policy</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 offset-xxl-1 col-lg-3 col-md-6 pe-xxl-1">
+                        <div class="footer-widget mb-30" data-cue="slideInUp" data-delay="300">
+                            <h3 class="footer-widget-title fs-24 fw-bold text-white mb-30">Get In Touch</h3>
+                            <ul class="contact-info list-unstyled mb-0">
+                                <li class="d-flex flex-wrap align-items-center">
+                                    <span class="d-flex flex-column align-items-center justify-content-center rounded-circle"><img src="~/images/phone-white.svg" alt="Icon"></span><a href="tel:918128678908" class="fw-bold text-offwhite">
+                                        (918)128678908
+                                    </a>
+                                </li>
+                                <li class="d-flex flex-wrap align-items-center"><span class="d-flex flex-column align-items-center justify-content-center rounded-circle">
+                                    <img src="~/images/mail-white.svg" alt="Icon">
+                                    </span><p class="text-offwhite mb-0">reservation@sparkviewclubandresorts.in</p>
+                                </li>
+                                <li class="d-flex flex-wrap align-items-center">
+                                    <span class="d-flex flex-column align-items-center justify-content-center rounded-circle">
+                                        <img src="~/images/mail-white.svg" alt="Icon">
+                                    </span>
+                                    <p class="text-offwhite mb-0">info@sparkviewclubandresorts.in</p>
+                                </li>
+                                <li class="d-flex flex-wrap align-items-center text-offwhite">
+                                    <span class="d-flex flex-column align-items-center justify-content-center rounded-circle"><img src="~/images/map-white.svg" alt="Icon"></span><p class="text-offwhite mb-0">
+                                        B :- 702 , Sivanta One The Business Park Opposite Congress Bhavan Paldi Ahmedabad
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center px-2">
+            <p class="copyright-text text-title fw-bold mb-0" data-cue="slideInUp" data-delay="200"><i class="ri-copyright-line"></i><span class="text_secondary fw-semibold">Spark View</span> Is Proudly Owned By <a href="https://hibotheme.com" target="_blank" class="link style-one">HiboTheme</a></p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <div id="progress-wrap" class="progress-wrap style-one">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path id="progress-path" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+    <!-- JS Files -->
+
+    <script data-cfasync="false" src="~/js/email-decode.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/megamenu.js"></script>
+    <script src="~/js/swiper-bundle.min.js"></script>
+    <script src="~/js/fslightbox.js"></script>
+    <script src="~/js/gsap.min.js"></script>
+    <script src="~/js/scrollTrigger.min.js"></script>
+    <script src="~/js/scrollToPlugin.js"></script>
+    <script src="~/js/SplitText.min.js"></script>
+    <script src="~/js/customEase.js"></script>
+    <script src="~/js/scrollcue.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+ 
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
