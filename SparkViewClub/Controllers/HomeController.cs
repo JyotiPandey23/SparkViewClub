@@ -47,6 +47,17 @@ namespace SparkViewClub.Controllers
         {
             return View();
         }
+        public IActionResult PayPrivacy()
+        {
+            return View();
+        }
+
+        public IActionResult TearmsCondition()
+        {
+            return View();
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
