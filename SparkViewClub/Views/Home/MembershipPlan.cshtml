@@ -34,7 +34,7 @@
                     <!-- <li class="position-relative fw-medium font-secondary d-flex flex-wrap align-items-center"><span class="d-flex flex-column align-items-center justify-content-center rounded-circle position-relative bg-white transition"><img src="~/images/check.svg" alt="Icon"></span></li> -->
                 </ul>
                 <img src="~/images/down-large-arrow.svg" alt="Icon" class="down-arrow d-block mx-auto">
-                <a href="#" class="btn style-two text-center">Subscribe Now</a>
+                <a data-bs-toggle="modal" data-bs-target="#subscribeModal" class="btn style-two text-center">Subscribe Now</a>
             </div>
         </div>
         <div class="col-xl-4 col-md-6">
@@ -50,7 +50,7 @@
 
                 </ul>
                 <img src="~/images/down-large-arrow.svg" alt="Icon" class="down-arrow d-block mx-auto">
-                <a href="#" class="btn style-two text-center">Subscribe Now</a>
+                <a data-bs-toggle="modal" data-bs-target="#subscribeModal" class="btn style-two text-center">Subscribe Now</a>
             </div>
         </div>
         <div class="col-xl-4 col-md-6">
@@ -66,7 +66,7 @@
 
                 </ul>
                 <img src="~/images/down-large-arrow.svg" alt="Icon" class="down-arrow d-block mx-auto">
-                <a href="#" class="btn style-two text-center">Subscribe Now</a>
+                <a data-bs-toggle="modal" data-bs-target="#subscribeModal" class="btn style-two text-center">Subscribe Now</a>
             </div>
         </div>
     </div>
@@ -110,3 +110,83 @@
     </div>
 </div>
 <!-- Feature Section End -->
+
+
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-0 border-0 rounded-4 shadow-lg" style="overflow: hidden;">
+
+            <!-- Header with Gradient -->
+            <div class="modal-header text-center flex-column p-4">
+                <h2 class="modal-title fw-bold fs-4" id="subscribeModalLabel">Subscribe Now</h2>
+                <p class="fs-6 mb-0">Join our exclusive membership plans today!</p>
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body p-4" style="background: #fff;">
+                <form>
+                    <!-- Name & Phone -->
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="input-group shadow-sm rounded-pill overflow-hidden">
+                                <span class="input-group-text bg-light border-0">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                                <input type="text" class="form-control border-0" placeholder="Your Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group shadow-sm rounded-pill overflow-hidden">
+                                <span class="input-group-text bg-light border-0">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </span>
+                                <input type="text" class="form-control border-0" placeholder="Phone" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email & Membership -->
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="input-group shadow-sm rounded-pill overflow-hidden">
+                                <span class="input-group-text bg-light border-0">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </span>
+                                <input type="email" class="form-control border-0" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-select shadow-sm rounded-pill">
+                                <option selected>Select Membership</option>
+                                <option>Basic Plan - ₹99,999</option>
+                                <option>Premium Plan - ₹1,50,000</option>
+                                <option>Ultimate Plan - ₹3,50,000</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Adults & Kids -->
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <input type="number" class="form-control rounded-pill shadow-sm" placeholder="Number of Adults" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="number" class="form-control rounded-pill shadow-sm" placeholder="Number of Kids">
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success px-5 py-2 rounded-pill fw-bold shadow hover-glow">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

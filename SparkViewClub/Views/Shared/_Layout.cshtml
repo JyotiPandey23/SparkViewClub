@@ -39,16 +39,18 @@
     <div class="navbar-area style-four bg-transparent position-relative z-2" id="navbar">
         <div class="container-fluid">
             <div class="navbar-wrapper d-flex justify-content-between align-items-center">
-                <a  class="navbar-brand">
 
-                  <h3>Spark View</h3>
-                    @*  <img src="~/images/logo.png" alt="Logo" class="logo-light">
-                    <img src="~/images/logo-white.png" alt="Logo" class="logo-dark"> *@
+                <a class="navbar-brand">
+                    <img src="~/images/logo.png" alt="Logo" class="logo-light" style="height:100px; object-fit:contain;">
+                    <!-- Optional: Dark version if needed -->
+                    <!-- <img src="~/images/logo-white.png" alt="Logo" class="logo-dark"> -->
                 </a>
+
                 <ul class="header-submenu list-unstyled mb-0 mx-auto d-xxl-inline-block d-none">
                     <li class="d-inline-block"><a href="#" class="text-para hover-text-secondary fw-bold">Welcome To Travel Agency<i class="ri-arrow-right-up-line"></i></a></li>
                     <li class="d-inline-block"><a href="#" class="text-para hover-text-secondary fw-bold">Award Winning Company<i class="ri-arrow-right-up-line"></i></a></li>
                 </ul>
+
                 <div class="header-submenu-wrap d-block ms-auto me-2 d-xxl-none d-inline-block">
                     <span class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-white"><i class="ri-more-line"></i></span>
                     <ul class="header-submenu list-unstyled d-flex flex-wrap mb-0 mx-auto">
@@ -56,6 +58,7 @@
                         <li><a href="#" class="text-para hover-text-secondary fw-bold">Award Winning Company<img src="~/images/up-right-arrow.svg" alt="Icon"></a></li>
                     </ul>
                 </div>
+
                 <div class="menu-area ms-xxl-auto">
                     <div class="overlay"></div>
                     <nav class="menu">
@@ -64,16 +67,11 @@
                             <div class="menu-mobile-title"></div>
                             <button type="button" class="menu-mobile-close bg-transparent border-0"><i class="ri-close-line"></i></button>
                         </div>
+
                         <ul class="menu-section p-0 mb-0 lh-1">
-                            <li class="menu-item-has-children">
-                                <a asp-controller="Home" asp-action="Index" class="active">Home<i class="ri-add-line"></i></a>
-                               
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a asp-controller ="Home" asp-action="About_us">About Us<i class="ri-add-line"></i></a>
-                               
-                            </li>
-                          
+                            <li><a asp-controller="Home" asp-action="Index" class="active">Home<i class="ri-add-line"></i></a></li>
+                            <li><a asp-controller="Home" asp-action="About_us">About Us<i class="ri-add-line"></i></a></li>
+
                             <li class="menu-item-has-children">
                                 <a asp-controller="Home" asp-action="Domestic_destination">Destinations<i class="ri-add-line"></i></a>
                                 <ul class="menu-subs menu-column-1">
@@ -81,38 +79,34 @@
                                     <li><a asp-controller="Home" asp-action="Internation_destination">International</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a asp-controller="Home" asp-action="Contact_us">Contact Us<i class="ri-add-line"></i></a>
 
-                            </li>
-                            <li class="menu-item-has-children">
+                            <li><a asp-controller="Home" asp-action="Contact_us">Contact Us<i class="ri-add-line"></i></a></li>
 
+                            <li class="menu-item-has-children">
                                 <a href="#">Membership Pages<i class="ri-add-line"></i></a>
                                 <ul class="menu-subs menu-column-1">
                                     <li><a asp-controller="Home" asp-action="MembershipPlan">Membership Plan</a></li>
                                     <li><a asp-controller="Home" asp-action="MembershipLogin">Membership Login</a></li>
                                     <li><a>PayNow</a></li>
                                 </ul>
-
                             </li>
                         </ul>
                     </nav>
                 </div>
+
                 <div class="other-options d-flex flex-wrap align-items-center justify-content-end">
-                   <div class="option-item">
+                    <div class="option-item">
                         <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar-area" aria-controls="sidebar-area" class="sidebar-btn d-flex flex-column align-items-center justify-content-center rounded-circle">
                             <img src="~/images/sidebar-btn.svg" alt="Icon">
                         </button>
-                    </div> 
+                    </div>
                     <div class="option-item d-lg-none">
                         <button type="button" class="menu-mobile-trigger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span></span><span></span><span></span><span></span>
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .navbar-area {
   z-index: 999;
 }
@@ -86,9 +92,9 @@
 .navbar-area.style-one.sticky {
   background-color: #D8E7F4 !important;
 }
-.navbar-area.style-four {
+/*.navbar-area.style-four {
   margin: 39px 0 0;
-}
+}*/
 .navbar-area.style-two.sticky {
   background-color: #D0EBE4 !important;
 }
@@ -406,7 +412,7 @@
 }
 @media only screen and (max-width: 991px) {
   .navbar-area {
-    padding: 14px 0;
+    /*padding: 14px 0;*/
     z-index: 99;
   }
   .navbar-area.sticky {
